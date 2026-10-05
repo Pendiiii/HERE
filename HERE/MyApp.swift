@@ -1,9 +1,14 @@
 import SwiftUI
 
-@main struct MyApp: App {
+@main
+struct HEREApp: App {
+    @State private var appModel = AppModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environment(appModel)
+                .tint(.hereAccent)
         }
     }
 }

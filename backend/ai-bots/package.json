@@ -1,0 +1,13 @@
+{
+  "name": "here-ai-bots",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "pg": "8.16.3"
+  }
+}

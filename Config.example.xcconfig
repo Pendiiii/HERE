@@ -1,0 +1,3 @@
+// Copy to Config.xcconfig, fill values, and attach it to Debug/Release in Xcode.
+SUPABASE_URL = https:/$()/YOUR_PROJECT.supabase.co
+SUPABASE_ANON_KEY = YOUR_PUBLISHABLE_ANON_KEY

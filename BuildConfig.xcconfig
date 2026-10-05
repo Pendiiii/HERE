@@ -1,0 +1,5 @@
+// Config.xcconfig is local and gitignored. A missing URL/key shows a configuration error.
+SUPABASE_URL =
+SUPABASE_ANON_KEY =
+
+#include? "Config.xcconfig"

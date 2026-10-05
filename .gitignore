@@ -1,0 +1,8 @@
+.DS_Store
+Config.xcconfig
+xcuserdata/
+DerivedData/
+*.xcuserstate
+supabase/.temp/
+deploy/*.secret
+node_modules/

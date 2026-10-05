@@ -1,0 +1,13 @@
+services:
+  here-discord-moderation:
+    build: ./discord-moderation
+    restart: unless-stopped
+    env_file:
+      - .env.discord
+    environment:
+      DATABASE_URL: postgresql://here_moderator:${HERE_MODERATOR_DB_PASSWORD}@db:${POSTGRES_PORT:-5432}/${POSTGRES_DB:-postgres}
+      SUPABASE_STORAGE_URL: http://storage:5000
+      SUPABASE_SERVICE_ROLE_KEY: ${SERVICE_ROLE_KEY:?Set this in the project .env file}
+    depends_on:
+      db:
+        condition: service_healthy

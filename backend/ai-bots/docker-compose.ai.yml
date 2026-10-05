@@ -1,0 +1,11 @@
+services:
+  here-ai-bots:
+    build: ./ai-bots
+    restart: unless-stopped
+    env_file:
+      - .env.ai
+    environment:
+      DATABASE_URL: postgresql://here_ai_bot:${HERE_AI_BOT_DB_PASSWORD}@db:${POSTGRES_PORT:-5432}/${POSTGRES_DB:-postgres}
+    depends_on:
+      db:
+        condition: service_healthy
